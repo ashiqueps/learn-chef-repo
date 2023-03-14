@@ -1,0 +1,824 @@
+    1  exit
+    2  sudo su -
+    3  clear
+    4  vault server -dev
+    5  systemctl status vault
+    6  systemctl restart vault
+    7  systemctl stop vault
+    8  reboot
+    9  sudo su -
+   10  pwd
+   11  ls -la
+   12  vi .bash_profile 
+   13  echo $VAULT_ADDR
+   14  openssl passwd -1 -salt $(openssl rand -base64 6) AwesomePassword
+   15  vault kv put secret/password password='$1$Xrp/cOKR$PFvvj29UUpkVlf95GxT6n.'
+   16  vault kv get secret/password
+   17  ls -l
+   18  pwd
+   19  sudo mkdir /opt/IntermediateCode
+   20  mv /tmp/chef-repo.tar /opt/IntermediateCode/
+   21  sudo mv /tmp/chef-repo.tar /opt/IntermediateCode/
+   22  cd /opt/IntermediateCode/
+   23  ls -l 
+   24  tar -xvf chef-repo.tar 
+   25  sudo tar -xvf chef-repo.tar 
+   26  ls -l
+   27  cd chef-repo/cookbooks/apache/
+   28  ls -l
+   29  vi recipes/default.rb 
+   30  kitchen list
+   31  sudo usermod -aG docker chef
+   32  kitchen list
+   33  id -nG
+   34  docker images
+   35  sudo docker images
+   36  clear
+   37  vault server -dev
+   38  sudo amazon-linux-extras install java-openjdk11
+   39  sudo tee /etc/yum.repos.d/jenkins.repo<<EOF
+   40  [jenkins]
+   41  name=Jenkins
+   42  baseurl=http://pkg.jenkins.io/redhat
+   43  gpgcheck=0
+   44  EOF
+   45  sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+   46  sudo yum install jenkins
+   47  systemctl enable jenkins
+   48  sudo systemctl start jenkins
+   49  sudo systemctl enable jenkins
+   50  sudo systemctl status jenkins
+   51  ls /var/lib/jenkins/secrets/
+   52  sudo ls /var/lib/jenkins/secrets/
+   53  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+   54  ls -l /opt
+   55  ls -l /var/lib/jenkins/
+   56  vi /var/lib/jenkins/config.xml 
+   57  curl http://localhost:4243/version
+   58  systemctl status docker
+   59  docker images
+   60  sudo socker images
+   61  sudo docker images
+   62  curl http://localhost:4243
+   63  curl localhost:4243
+   64  curl 127.0.0.1:4243
+   65  vault server -dev -dev-listen-address=”0.0.0.0:8200”
+   66  vault server -dev -dev-listen-address="0.0.0.0:8200"
+   67  vault server -dev -dev-listen-address=”0.0.0.0:8200”
+   68  vault server -dev -dev-listen-address="0.0.0.0:8200"
+   69  vault server -dev -dev-listen-address="44.200.70.57:8200"
+   70  vault server -dev -dev-listen-address="127.0.0.1:8200"
+   71  vault server -dev -dev-listen-address="0.0.0.0:8200"
+   72  docker images
+   73  cd /opt/IntermediateCode/chef-repo/cookbooks/apache/
+   74  ls -l
+   75  kitchen list
+   76  cat recipes/default.rb 
+   77  kitchen converge centos-7
+   78  kitchen list
+   79  pwd
+   80  ls -l
+   81  cd /opt/IntermediateCode/
+   82  cp -p chef-repo.tar /home/chef/
+   83  cd /home/chef/
+   84  ls -l
+   85  tar -xvf chef-repo.tar 
+   86  ls -l
+   87  rm chef-repo.tar 
+   88  cd chef-repo/cookbooks/apache/
+   89  kitchen list
+   90  vi recipes/default.rb 
+   91  kitchen converge centos-7
+   92  df -h
+   93  memstat
+   94  sudo su -
+   95  kitchen converge centos-7
+   96  pwd
+   97  ls -l
+   98  rm Policyfile.lock.json 
+   99  kitchen converge centos-7
+  100  sudo su -
+  101  kitchen converge centos-7
+  102  systemctl status jenkins
+  103  systemctl stop jenkins
+  104  systemctl status jenkins
+  105  sudo systemctl stop jenkins.service
+  106  systemctl status jenkins
+  107  kitchen converge centos-7
+  108  vault kv put secret/password password='$1$Xrp/cOKR$PFvvj29UUpkVlf95GxT6n.'
+  109  vault kv get secret/password
+  110  vi recipes/default.rb 
+  111  kitchen converge centos-7
+  112  cat /opt/IntermediateCode/chef-repo/cookbooks/apache/recipes/default.rb 
+  113  rm recipes/default.rb 
+  114  cp -p /opt/IntermediateCode/chef-repo/cookbooks/apache/recipes/default.rb recipes/
+  115  vi recipes/default.rb 
+  116  kitchen converge centos-7
+  117  vi recipes/default.rb 
+  118  kitchen converge centos-7
+  119  vi recipes/default.rb 
+  120  cat recipes/default.rb 
+  121  vi recipes/default.rb 
+  122  kitchen converge centos-7
+  123  vi recipes/default.rb 
+  124  kitchen converge centos-7
+  125  vi recipes/default.rb 
+  126  kitchen converge centos-7
+  127  vault kv put secret/password password='$1$Xrp/cOKR$PFvvj29UUpkVlf95GxT6n.'
+  128  kitchen converge centos-7
+  129  vault kv get secret/password
+  130  vi recipes/default.rb 
+  131  kitchen converge centos-7
+  132  vault kv get secret/password
+  133  vault kv get secret/password/data
+  134  vi recipes/default.rb 
+  135  kitchen converge centos-7
+  136  vi recipes/default.rb 
+  137  kitchen converge centos-7
+  138  vi recipes/default.rb 
+  139  kitchen converge centos-7
+  140  vault kv list secret/
+  141  vault kv list secret/password
+  142  vi recipes/default.rb 
+  143  kitchen converge centos-7
+  144  vi recipes/default.rb 
+  145  kitchen converge centos-7
+  146  vault kv list secret/password
+  147  vault kv list secret/
+  148  vault kv get secret/password
+  149  vi recipes/default.rb 
+  150  kitchen converge centos-7
+  151  vault kv get 
+  152  vault kv get /secret
+  153  vault kv get secret/data
+  154  vault kv get secret/password
+  155  vi recipes/default.rb 
+  156  kitchen converge centos-7
+  157  vi recipes/default.rb 
+  158  kitchen converge centos-7
+  159  cat recipes/default.rb 
+  160  vi recipes/default.rb 
+  161  kitchen converge centos-7
+  162  vi recipes/default.rb 
+  163  kitchen converge centos-7
+  164  vi recipes/default.rb 
+  165  kitchen converge centos-7
+  166  vi recipes/default.rb 
+  167  kitchen converge centos-7
+  168  vi recipes/default.rb 
+  169  kitchen converge centos-7
+  170  vi recipes/default.rb 
+  171  kitchen converge centos-7
+  172  vi recipes/default.rb 
+  173  kitchen converge centos-7
+  174  vi recipes/default.rb 
+  175  kitchen converge centos-7
+  176  vi recipes/default.rb 
+  177  cat recipes/default.rb 
+  178  kitchen converge centos-7
+  179  vi recipes/default.rb 
+  180  kitchen converge centos-7
+  181  vi recipes/default.rb 
+  182  kitchen converge centos-7
+  183  vi recipes/default.rb 
+  184  kitchen destroy centos-7
+  185  kitchen converge centos-7
+  186  vi recipes/default.rb 
+  187  kitchen converge centos-7
+  188  vi recipes/default.rb 
+  189  kitchen converge centos-7
+  190  kitchen login centos-7
+  191  cat recipes/default.rb 
+  192  vi recipes/default.rb 
+  193  kitchen converge centos-7
+  194  vi recipes/default.rb 
+  195  kitchen converge centos-7
+  196  vi recipes/default.rb 
+  197  kitchen destroy centos-7
+  198  kitchen converge centos-7
+  199  vi recipes/default.rb 
+  200  kitchen converge centos-7
+  201  vi recipes/default.rb 
+  202  kitchen converge centos-7
+  203  vi recipes/default.rb 
+  204  kitchen converge centos-7
+  205  reboot
+  206  sudo reboot
+  207  cd chef-repo/cookbooks/apache/
+  208  cat templates/conf.erb 
+  209  clear
+  210  vault server -dev -dev-listen-address="0.0.0.0:8200"
+  211  cd chef-repo/cookbooks/apache/
+  212  vi recipes/default.rb 
+  213  openssl passwd -1 -salt $(openssl rand -base64 6) 1AwesomePassword
+  214  vault kv put secret/password password='$1$/lES63wR$ramaAWC0YQuQhZRn3cI3w.'
+  215  vault kv put secret/password password='HASHED_PASSWORD'
+  216  vault kv put secret/password password='$1$/lES63wR$ramaAWC0YQuQhZRn3cI3w.'
+  217  vault kv get secret/password
+  218  cat recipes/default.rb 
+  219  vi recipes/default.rb 
+  220  cat recipes/default.rb 
+  221  kitchen list
+  222  kitchen destroy centos-7
+  223  kitchen converge centos-7
+  224  vi recipes/default.rb 
+  225  kitchen converge centos-7
+  226  vi recipes/default.rb 
+  227  kitchen converge centos-7
+  228  kitchen login centos-7
+  229  vi recipes/default.rb 
+  230  ls -la recipes/
+  231  rm recipes/.default.rb.swp 
+  232  kitchen destroy centos-7
+  233  kitchen converge centos-7
+  234  kitchen login centos-7
+  235  cat recipes/default.rb 
+  236  kitchen destroy
+  237  cd ../..
+  238  cd ..
+  239  ls -l
+  240  ls -l /opt/IntermediateCode/
+  241  rm -rf /opt/IntermediateCode/*
+  242  sudo rm -rf /opt/IntermediateCode/*
+  243  rsync -avz chef-repo/ /opt/IntermediateCode/
+  244  sudo rsync -avz chef-repo/ /opt/IntermediateCode/
+  245  ls -l /opt/IntermediateCode/
+  246  ls -l /opt/IntermediateCode/cookbooks/
+  247  cd /opt/IntermediateCode/
+  248  ls -l
+  249  sudo mkdir chef-repo
+  250  sudo mv * chef-repo/
+  251  ls -l
+  252  ls -l chef-repo/
+  253  ls -l chef-repo/cookbooks/apache/
+  254  ls -l chef-repo/cookbooks/apache/spec/unit/recipes/default_spec.rb 
+  255  cat chef-repo/cookbooks/apache/spec/unit/recipes/default_spec.rb 
+  256  cd ~
+  257  ls -l
+  258  docker images
+  259  cd chef-repo/cookbooks/apache/
+  260  kitchen list
+  261  docker --help
+  262  docker images
+  263  docker stop b9dece1e8895
+  264  docker stop a12824c5dd01
+  265  docker rmi b9dece1e8895
+  266  docker rmi a12824c5dd01
+  267  docker rm b9dece1e8895
+  268  docker images
+  269  clear
+  270  /opt/chef-workstation/embedded/bin/irb
+  271  clear
+  272  sudo systemctl start jenkins
+  273  docker images
+  274  sudo systemctl status docker
+  275  sudo netstat -an | grep docker
+  276  pwd
+  277  ls -l
+  278  ls -l /opt/IntermediateCode/
+  279  diff /home/chef/chef-repo/ /opt/IntermediateCode/chef-repo/
+  280  diff /home/chef/chef-repo/cookbooks/apache /opt/IntermediateCode/chef-repo/cookbooks/apache
+  281  diff /home/chef/chef-repo/cookbooks/apache/recipes/default.rb /opt/IntermediateCode/chef-repo/cookbooks/apache/recipes/default.rb
+  282  rm -rf /home/chef/chef-repo/
+  283  ls -l /var
+  284  ls -l /var/lib/
+  285  which java
+  286  ls -l /var/lib/jenkins/
+  287  sudo ln -s /var/lib/jenkins/jdk/bin/java /usr/bin/java
+  288  sudo ln -s /usr/bin/java /var/lib/jenkins/jdk/bin/java
+  289  sudo ln -sp /usr/bin/java /var/lib/jenkins/jdk/bin/java
+  290  vault server -dev -dev-listen-address="0.0.0.0:8200"
+  291  sudo reboot
+  292  clear
+  293  vault server --help
+  294  vault server -dev -dev-listen-address="0.0.0.0:8200"
+  295  ls -l
+  296  chef -v
+  297  exit
+  298  cd /opt/IntermediateCode/chef-repo/cookbooks/apache/
+  299  chef exec rspec spec/unit/recipes/default_spec.rb 
+  300  ls -l
+  301  cd ..
+  302  cd /opt/IntermediateCode/
+  303  ls -l
+  304  ls -l /home/chef/
+  305  rsync -avz chef-repo/ /home/chef/
+  306  ls -l /home/chef/
+  307  rsync -avz chef-repo /home/chef/
+  308  cd ~
+  309  chef exec rspec
+  310  cd chef-repo/cookbooks/apache/
+  311  chef exec rspec
+  312  rm Policyfile.lock.json 
+  313  chef exec rspec
+  314  vi recipes/default.rb 
+  315  chef exec rspec
+  316  vi recipes/default.rb 
+  317  chef exec rspec
+  318  vi recipes/default.rb 
+  319  chef exec rspec
+  320  vi recipes/default.rb 
+  321  chef exec rspec
+  322  vi recipes/default.rb 
+  323  chef exec rspec
+  324  vi recipes/default.rb 
+  325  chef exec rspec
+  326  rm -rf /opt/IntermediateCode/chef-repo/
+  327  sudo rm -rf /opt/IntermediateCode/chef-repo/
+  328  cd ~
+  329  sudo rsync -avz chef-repo /opt/IntermediateCode/
+  330  pwd
+  331  ls -l
+  332  ls -ltr
+  333  ls workspace/
+  334  rm -rf workspace/
+  335  rm -rf caches/
+  336  rm -rf remoting
+  337  rm -rf remoting*
+  338  rm -rf cookbooks/
+  339  rm -rf data_bags/
+  340  rm -rf policyfiles/
+  341  rm -rf README.md 
+  342  rm -rf LICENSE 
+  343  rm -rf chefignore 
+  344  ls -l
+  345  cat /etc/cloud/cloud.cfg
+  346  vi /etc/cloud/cloud.cfg
+  347  sudo vi /etc/cloud/cloud.cfg
+  348  yum repolist
+  349  yum remove jenkins
+  350  sudo yum remove jenkins
+  351  yum install jenkins
+  352  sudo yum install jenkins
+  353  sudo systemctl start jenkins
+  354  sudo yum remove jenkins
+  355  sudo rm -rf /var/lib/jenkins/
+  356  sudo yum install jenkins
+  357  sudo systemctl status jenkins
+  358  sudo systemctl start jenkins
+  359  sudo yum remove jenkins
+  360  sudo rm -rf /var/lib/jenkins/
+  361  rm -rf chef-repo/
+  362  ls -l
+  363  rm -rf remoting.jar 
+  364  rm -rf remoting
+  365  ls -l
+  366  ls -la
+  367  rm -rf .vault-token 
+  368  ls -l /opt
+  369  mv /opt/IntermediateCode/ /opt/CourseCode
+  370  sudo mv /opt/IntermediateCode/ /opt/CourseCode
+  371  sudo vi /etc/cloud/cloud.cfg
+  372  yum repolist
+  373  which vault
+  374  sudo shutdown
+  375  ls
+  376  pwd
+  377  ls
+  378  cd ..
+  379  ls
+  380  vi script.sh
+  381  sudo su -
+  382  ls
+  383  ls -l
+  384  pwd
+  385  cd ~
+  386  ls
+  387  cd ..
+  388  ls
+  389  cd ~
+  390  vi kitchen-template.yml
+  391  more kitchen-template.yml
+  392  ls -l
+  393  vi kitchen-template.yml
+  394  more kitchen-template.yml
+  395  ls -l
+  396  pwd
+  397  cd ..
+  398  ls -l
+  399  ls
+  400  pwd
+  401  sudo -l
+  402  sudo -i
+  403  pwd
+  404  cd ../code/
+  405  ls -l
+  406  vi script1.sh 
+  407  ./script1.sh 
+  408  ps -ef 
+  409  kill -9 11605
+  410  ps -ef 
+  411  kill -9 11639
+  412  ps -ef 
+  413  ps -ef 11645
+  414  kill -9 11645
+  415  ps -ef
+  416  ./script1.sh
+  417  vi script1.sh 
+  418  vi token.txt
+  419  vi script1.sh 
+  420  ./script1.sh
+  421  ps -ef 
+  422  kill -9 23375
+  423  ps -ef 
+  424  kill -9 23383 
+  425  ps -ef 
+  426  kill -9 23879 23400
+  427  ps -ef 
+  428  kill -9 23389
+  429  ps -ef 
+  430  vi script1.sh 
+  431  ./script1.sh 
+  432  vi script1.sh 
+  433  ls -l 
+  434  vi script1.sh 
+  435  ps -ef | grep vscode
+  436  kill -9 25435
+  437  ps -ef | grep vscode
+  438  kill -9 25441
+  439  ps -ef | grep vscode
+  440  kill -9 25452
+  441  ps -ef | grep vscode
+  442  ./script1.sh 
+  443  vi script1.sh 
+  444  ./script1.sh 
+  445  vi script1.sh 
+  446  ./script1.sh 
+  447  vi script1.sh 
+  448  ./script1.sh 
+  449  vi script1.sh 
+  450  ./script1.sh 
+  451  wget --help
+  452  ls -l
+  453  exit
+  454  code-server serve-local --helo
+  455  code-server serve-local --help
+  456  ls -lexit
+  457  exit
+  458  pwd
+  459  cd ..
+  460  ls
+  461  ls -l
+  462  sudo -i
+  463  ls
+  464  pwd
+  465  cd
+  466  pwd
+  467  cd ..
+  468  ls
+  469  sudo mkdir code
+  470  ls -l
+  471  sudo chown chef:chef code
+  472  ls -l
+  473  mv chef/script.sh code
+  474  ls -l
+  475  cd code/
+  476  ls
+  477  ls -l
+  478  sudo ls -l /root
+  479  sudo cp /root/code-server-setup.sh .
+  480  ls -l
+  481  sudo chown chef:chef code-server-setup.sh
+  482  ls -l
+  483  vi script.sh
+  484  cat script.sh
+  485  ls
+  486  ./script.sh
+  487  ls
+  488  cat script.sh
+  489  ls
+  490  code-server --help
+  491  code-server user --help
+  492  code-server user show
+  493  code-server user login
+  494  code-server user login --help
+  495  code-server serve-local
+  496  code-server serve-local --help
+  497  ls -l
+  498  cp script.sh script1.sh
+  499  ps
+  500  exit
+  501  sudo su -
+  502  ls -l
+  503  cd ..
+  504  ls -l
+  505  cd code/
+  506  ls -l
+  507  ./script1.sh 
+  508  vi script1.sh 
+  509  ./script1.sh 
+  510  wget --help
+  511  ./script1.sh 
+  512  vi script1.sh 
+  513  wget --help | grep quite
+  514  wget --help | grep qu
+  515  ./script1.sh 
+  516  ls -l
+  517  rm code-server-setup.sh 
+  518  ./script1.sh 
+  519  ls 
+  520  ./script1.sh 
+  521  vi script1.sh  
+  522  ./script1.sh 
+  523  vi script1.sh 
+  524  ./script1.sh 
+  525  vi script1.sh 
+  526  ./script1.sh 
+  527  vi script1.sh 
+  528  ./script1.sh 
+  529  vi script1.sh 
+  530  ./script1.sh 
+  531  vi script1.sh 
+  532  wget --quiet -O /home/code/code-server-setup.sh https://aka.ms/install-vscode-server/setup.sh
+  533  wget -O /home/code/code-server-setup.sh https://aka.ms/install-vscode-server/setup.sh
+  534  vi script1.sh 
+  535  ./script1.sh 
+  536  vi script1.sh 
+  537  curl http://169.254.169.254/latest/meta-data/local-ipv4
+  538  vi script1.sh 
+  539  curl http://169.254.169.254/latest/meta-data/public-ipv4
+  540  vi script1.sh 
+  541  ./script1.sh 
+  542  vi script1.sh 
+  543  ./script1.sh 
+  544  vi script1.sh 
+  545  ./script1.sh 
+  546  cat  script1.sh 
+  547  code-server serve-local --host `curl -s  http://169.254.169.254/latest/meta-data/local-ipv4` --port 8000 --accept-server-license-terms --connection-token-file /home/code/token.txt  --log off
+  548  code-server serve-local --help
+  549  code-server serve-local --host `curl -s  http://169.254.169.254/latest/meta-data/local-ipv4` --port 8000 --accept-server-license-terms --connection-token-file /home/code/token.txt  --log off > abc
+  550  code-server serve-local --host `curl -s  http://169.254.169.254/latest/meta-data/local-ipv4` --port 8000 --accept-server-license-terms --connection-token-file /home/code/token.txt  --log off > abc &
+  551  vi script1.sh 
+  552  code-server serve-local --host `curl -s  http://169.254.169.254/latest/meta-data/local-ipv4` --port 8000 --accept-server-license-terms --connection-token-file /home/code/token.txt  --log off & > /home/code/code-server.log 2>&1
+  553  code-server serve-local --host `curl -s  http://169.254.169.254/latest/meta-data/local-ipv4` --port 8000 --accept-server-license-terms --connection-token-file /home/code/token.txt  --log off > /home/code/code-server.log 2>&1 &
+  554  vi script1.sh 
+  555  ./script1.sh 
+  556  ls -l 
+  557  rm abc 
+  558  cat code-server.log 
+  559  rm code-server.log 
+  560  ls -l
+  561  ls -l /root/
+  562  sudo ls -l /root/
+  563  sudo mv script.sh /root/
+  564  ls -l
+  565  sudo ls -l /root/
+  566  ls -l
+  567  mv script1.sh script.sh 
+  568  ./script.sh 
+  569  cd 
+  570  pwd
+  571  ls -l
+  572  ln --help
+  573  ln -s /home/code/script.sh vscode.sh
+  574  ls -l
+  575  ./vscode.sh 
+  576  ls -l
+  577  pwd
+  578  exit
+  579  exit
+  580  who
+  581  cd chef-repo/
+  582  chef -h
+  583  ls
+  584  chef generate cookbook cookbooks/workstation
+  585  cp ../setup.rb cookbooks/workstation/recipes/
+  586  git status 
+  587  git add .
+  588  gst
+  589  git status 
+  590  git commit -m "initial commit"
+  591  git status 
+  592  sudo chef-client -z --runlist "recipe[workstation::setup'"
+  593  sudo chef-client -z --runlist "recipe[workstation::setup]"
+  594  vi ~/.bashrc 
+  595  source ~/.bash
+  596  source ~/.bashrc 
+  597  cd chef-repo/
+  598  ls
+  599  chef generate cookbook cookbooks/apache
+  600  chef generate recipe cookbooks/workstation/apache server
+  601  chef generate recipe cookbooks/apache server
+  602  sudo chef-client -z -r "recipe[apache]"
+  603  curl 0.0.0.0
+  604  git status 
+  605  git diff
+  606  git add .
+  607  git status 
+  608  git commit -m "apache cookbook"
+  609  git status 
+  610  cookstyle
+  611  cookstyle -a
+  612  git status 
+  613  git diff
+  614  cookstyle -a
+  615  cookstyle
+  616  git diff
+  617  git add .
+  618  git commit -sm "Cooksyle fixes"
+  619  git status 
+  620  ls
+  621  cookstyle cookbooks/workstation/
+  622  cookstyle cookbooks/workstation/recipes/
+  623  ohai
+  624  ohai | more
+  625  ohai platform
+  626  ohai version
+  627  ohai hostname
+  628  ohai memory/total
+  629  ohai memory
+  630  ohai memory/free
+  631  sudo chef-client -z -r "recipe[apache]"
+  632  ls
+  633  cd cookbooks/workstation/
+  634  ls
+  635  cat kitchen.yml 
+  636  cd
+  637  cp kitchen-template.yml chef-repo/cookbooks/workstation/kitchen.yml 
+  638  cd -
+  639  cat kitchen.yml 
+  640  cd ../../
+  641  ls
+  642  kitchen create
+  643  cd cookbooks/workstation/
+  644  kitchen create
+  645  kitchen login
+  646  kitchen list
+  647  kitchen converge
+  648  kitchen verify
+  649  kitchen destroy
+  650  cd ../apache/
+  651  chef generate template
+  652  chef generate template --help
+  653  cd ../
+  654  chef generate template cookbooks/apache index.html
+  655  ls -la cookbooks/apache/templates/
+  656  ls
+  657  code cookbooks/apache/templates/index.html.erb 
+  658  ls
+  659  rm -rf cookbooks/
+  660  cd ../
+  661  chef generate template cookbooks/apache index.html
+  662  sudo chef-client -z -r "recipes[apache]"
+  663  sudo chef-client -z -r "recipe[apache]"
+  664  ls
+  665  cd 
+  666  ls
+  667  cd .chef
+  668  ls
+  669  knife configure init-config
+  670  cat credentials 
+  671  knife ssl fetch
+  672  knife configure init-config
+  673  knife ssl fetch
+  674  knife ssl check
+  675  knife client list
+  676  cd
+  677  git clone https://github.com/chef-training/foundations-cookbook-repo.git
+  678  cd foundations-cookbook-repo/
+  679  ls
+  680  mv myiis ~/chef-repo/cookbooks/
+  681  ls
+  682  git status 
+  683  git restore .
+  684  git status 
+  685  cd ../chef-repo/cookbooks/
+  686  ls
+  687  knife node --help
+  688  knife node list
+  689  knife bootstrap --help
+  690  knife bootstrap -o winrm 52.1.71.190 -U Administrator -P Cod3Can! -N iis_web
+  691  knife node list
+  692  knife client show
+  693  knife client list
+  694  knife client --help
+  695  knife client show student08-validator
+  696  knife client show iss_web
+  697  knife client show iis_web
+  698  knife node show iis_web
+  699  knife bootstrap -o ssh 44.201.26.6 -U chef -P Cod3Can! -N apache_web
+  700  sudo knife bootstrap -o ssh 44.201.26.6 -U chef -P Cod3Can! -N apache_web
+  701  sudo knife bootstrap 44.201.26.6 -U chef -P Cod3Can! -N apache_web
+  702  knife bootstrap 44.201.26.6 -U chef -P Cod3Can! --sudo -N apache_web
+  703  knife node list
+  704  cd ..
+  705  ls
+  706  chef generate policyfile policyfiles/
+  707  rm policyfiles/policyfiles.rb 
+  708  chef generate policyfile policyfiles/company_web.rb
+  709  code policyfiles/company_web.rb 
+  710  rm policyfiles/company_web.rb 
+  711  chef generate policyfile policyfiles/company_web
+  712  code policyfiles/company_web.rb 
+  713  cd policyfiles/
+  714  rm company_web.rb 
+  715  chef generate policyfile apache
+  716  ls
+  717  code apache.rb 
+  718  chef install apache
+  719  chef install apache.rb 
+  720  code apache.lock.json 
+  721  chef show policy
+  722  chef show-policy
+  723  knife node policy set apache_web prod apache
+  724  chef push prod apache.lock.json 
+  725  knife node show apache_web
+  726  knife ssh 44.201.26.6 -m -x chef -P Cod3Can! 'sudo chef-client'
+  727  ls
+  728  cd ..
+  729  ls
+  730  chef generate cookbook cookbooks/company_web
+  731  ls
+  732  code cookbooks/company_web/recipes/default.rb 
+  733  chef generate attribute --help
+  734  chef generate attribute cookbooks/company_web default
+  735  chef generate template cookbooks/company_web homepage
+  736  chef generate policyfiles policyfiles/company_web
+  737  chef generate policyfile policyfiles/company_web
+  738  chef install policyfiles/company_web.rb 
+  739  cd policyfiles/
+  740  ls
+  741  chef push prod company_web.lock.json 
+  742  chef show-policy
+  743  knife node policy set iis_web prod compnay_web
+  744  knife node policy set iis_web prod company_web
+  745  knife node show iis_web
+  746  knife winrm 52.1.71.190 -m -x Administrator -P Cod3Can! "chef-client"
+  747  knife node policy set apache_web prod company_web
+  748  knife node show apache_web
+  749  knife ssh 44.201.26.6 -m -x chef -P Cod3Can! 'sudo chef-client'
+  750  sudo chef-client -z -r "recipe[myiis]"
+  751  sudo chef-client -z -r "recipe[a[acje]"
+  752  sudo chef-client -z -r "recipe[apache]"
+  753  git status 
+  754  cd ..
+  755  gst
+  756  git status 
+  757  git diff
+  758  git status 
+  759  git add .
+  760  git status 
+  761  git commit -sm "Cookbook attributes"
+  762  git status 
+  763  ls
+  764  chef generate cookbook cookbooks/myhaproxy
+  765  knife node show
+  766  knife node show iis_web -a ipadress
+  767  knife node list
+  768  knife node show iis_web
+  769  knife node show iis_web -a ipadress
+  770  knife node show iis_web -a ipaddress
+  771  knife node show iis_web -a cloud
+  772  knife node show apache_web -a cloud
+  773  chef generate policyfile policyfiles/myhaproxy
+  774  code policyfiles/myhaproxy.rb 
+  775  chef install policyfiles/myhaproxy.rb 
+  776  chef push prod policyfiles/myhaproxy.lock.json 
+  777  chef show-policy
+  778  knife bootstrap 44.214.118.217 -U chef -P Cod3Can! --sudo -N lb --policy-name myhaproxy --policy-group prod
+  779  knife node show lb
+  780  knife node policy set lb myhaproxy prod
+  781  knife node show lb
+  782  knife ssh 44.214.118.217 -m -x chef -P Cod3Can! "sudo chef-client"
+  783  knife node list
+  784  knife node delete lb
+  785  knife client list
+  786  knife client delete lb
+  787  ls
+  788  chef push prod policyfiles/myhaproxy.lock.json 
+  789  chef show-policy
+  790  knife bootstrap 44.214.118.217 -U chef -P Cod3Can! --sudo -N lb --policy-name myhaproxy --policy-group prod
+  791  chef install policyfiles/myhaproxy.rb 
+  792  chef push prod policyfiles/myhaproxy.lock.json 
+  793  knife bootstrap 44.214.118.217 -U chef -P Cod3Can! --sudo -N lb --policy-name myhaproxy --policy-group prod
+  794  chef install policyfiles/myhaproxy.rb 
+  795  rm policyfiles/myhaproxy.lock.json 
+  796  chef install policyfiles/myhaproxy.rb 
+  797  chef push prod policyfiles/myhaproxy.lock.json 
+  798  knife bootstrap 44.214.118.217 -U chef -P Cod3Can! --sudo -N lb --policy-name myhaproxy --policy-group prod
+  799  chef update policyfiles/myhaproxy.rb
+  800  chef push prod policyfiles/myhaproxy.lock.json 
+  801  knife bootstrap 44.214.118.217 -U chef -P Cod3Can! --sudo -N lb --policy-name myhaproxy --policy-group prod
+  802  chef update policyfiles/myhaproxy.rb
+  803  chef push prod policyfiles/myhaproxy.lock.json 
+  804  knife bootstrap 44.214.118.217 -U chef -P Cod3Can! --sudo -N lb --policy-name myhaproxy --policy-group prod
+  805  chef update policyfiles/myhaproxy.rb
+  806  chef push prod policyfiles/myhaproxy.lock.json 
+  807  knife bootstrap 44.214.118.217 -U chef -P Cod3Can! --sudo -N lb --policy-name myhaproxy --policy-group prod
+  808  ssh chef@44.214.118.217
+  809  chef update policyfiles/myhaproxy.rb
+  810  chef push prod policyfiles/myhaproxy.lock.json 
+  811  knife bootstrap 44.214.118.217 -U chef -P Cod3Can! --sudo -N lb --policy-name myhaproxy --policy-group prod
+  812  ssh chef@44.214.118.217
+  813  ssh chef@44.214.118.217  
+  814  ls
+  815  git status 
+  816  git diff
+  817  git add .
+  818  git status 
+  819  git commit -sm "load balancer"
+  820  git status 
+  821  history
+  822  history > commands
+  823  rm commands 
+  824  history > commands.txt
