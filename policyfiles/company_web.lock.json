@@ -1,0 +1,112 @@
+{
+  "revision_id": "40d3233cea58995d0de0ffd196d0c32c43ab918a5b4fcd5630391c14374075fa",
+  "name": "company_web",
+  "run_list": [
+    "recipe[company_web::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "apache": {
+      "version": "0.2.1",
+      "identifier": "77c5bf856902b035552b53c068478dadfbbc8239",
+      "dotted_decimal_identifier": "33712948596245168.15011818342737991.155778392293945",
+      "source": "../cookbooks/apache",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": "f392c15ce0e15f50b5aea10b2a52732e8f0ec822",
+        "working_tree_clean": false,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/apache"
+      }
+    },
+    "company_web": {
+      "version": "0.1.0",
+      "identifier": "5d5b4754e1c9e2414eed38655a4b4e611094e2c2",
+      "dotted_decimal_identifier": "26277534758980066.18382654246574667.86178796987074",
+      "source": "../cookbooks/company_web",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": "f392c15ce0e15f50b5aea10b2a52732e8f0ec822",
+        "working_tree_clean": false,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/company_web"
+      }
+    },
+    "myiis": {
+      "version": "0.2.1",
+      "identifier": "cd0784440dddcbcd7aa3187cc0d16bed4aec5c40",
+      "dotted_decimal_identifier": "57710634884521419.57837211134771409.118666908425280",
+      "source": "../cookbooks/myiis",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": "f392c15ce0e15f50b5aea10b2a52732e8f0ec822",
+        "working_tree_clean": false,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/myiis"
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "apache",
+        ">= 0.0.0"
+      ],
+      [
+        "company_web",
+        ">= 0.0.0"
+      ],
+      [
+        "myiis",
+        ">= 0.0.0"
+      ]
+    ],
+    "dependencies": {
+      "apache (0.2.1)": [
+
+      ],
+      "company_web (0.1.0)": [
+        [
+          "myiis",
+          ">= 0.0.0"
+        ],
+        [
+          "apache",
+          ">= 0.0.0"
+        ]
+      ],
+      "myiis (0.2.1)": [
+
+      ]
+    }
+  }
+}

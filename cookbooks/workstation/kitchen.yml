@@ -1,31 +1,45 @@
 ---
 driver:
-  name: vagrant
-
-## The forwarded_port port feature lets you connect to ports on the VM guest
-## via localhost on the host.
-## see also: https://www.vagrantup.com/docs/networking/forwarded_ports
-
-#  network:
-#    - ["forwarded_port", {guest: 80, host: 8080}]
+  name: ec2
+  retryable_tries: 120
+  retryable_sleep: 5
+  aws_ssh_key_id: training-ec2-keypair
+  region: us-east-1
+  availability_zone: us-east-1e
+  security_group_ids: sg-d7a564ae
+  subnet_id: subnet-fc6a4cc6
+  instance_type: t2.small
+  tags:
+    # Replace YOURNAME and YOURCOMPANY here
+    Name: "Chef Training Node for Ashique, Progress"
+    created-by: "test-kitchen"
+    user: <%= ENV['USER'] %>
 
 provisioner:
   name: chef_zero
-
-  ## product_name and product_version specifies a specific Chef product and version to install.
-  ## see the Chef documentation for more details: https://docs.chef.io/workstation/config_yml_kitchen/
-  #  product_name: chef
-  #  product_version: 17
+  cookbook_path: /home/chef/chef-repo/cookbooks
+  client_rb:
+    chef_liscense: accept
+    product_name: chef
+    product_version: 17
 
 verifier:
   name: inspec
 
 platforms:
-  - name: ubuntu-20.04
-  - name: centos-8
+  - name: CentOS-7.4-1.0.0
+    driver_config:
+      image_id: ami-0448247a34a8cb2bb
+    transport:
+      username: chef
+      password: Cod3Can!
 
 suites:
   - name: default
+    run_list:
+      # Replace with the name of the COOKBOOK
+      - recipe[workstation::default]
     verifier:
       inspec_tests:
         - test/integration/default
+    attributes:
