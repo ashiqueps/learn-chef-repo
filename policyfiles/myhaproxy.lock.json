@@ -1,0 +1,93 @@
+{
+  "revision_id": "24d113ecdfb8bd363a455a3e52d11e05acfc61a4a4001c79cc5623d7ab27848b",
+  "name": "myhaproxy",
+  "run_list": [
+    "recipe[myhaproxy::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "haproxy": {
+      "version": "12.2.11",
+      "identifier": "e9867265787857c9814c08645aa3f9a8ebc845d6",
+      "dotted_decimal_identifier": "65731495460370519.56718633877133987.274503905592790",
+      "cache_key": "haproxy-12.2.11-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/haproxy/versions/12.2.11/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/haproxy/versions/12.2.11/download",
+        "version": "12.2.11"
+      }
+    },
+    "myhaproxy": {
+      "version": "0.1.1",
+      "identifier": "3617ee78f2b28576b503a8a87643aec758c872a3",
+      "dotted_decimal_identifier": "15225961741202053.33413074570999363.192171211256483",
+      "source": "../cookbooks/myhaproxy",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": "29a9c4df6637ee47ece61f2da713a2821f57e842",
+        "working_tree_clean": false,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/myhaproxy"
+      }
+    },
+    "yum-epel": {
+      "version": "4.5.0",
+      "identifier": "dad6a6c002700a1ae06443e61afaf9abf5b6e2ab",
+      "dotted_decimal_identifier": "61597556597223434.7565070634982138.274516957127339",
+      "cache_key": "yum-epel-4.5.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/yum-epel/versions/4.5.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/yum-epel/versions/4.5.0/download",
+        "version": "4.5.0"
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "haproxy",
+        "= 12.2.11"
+      ],
+      [
+        "myhaproxy",
+        ">= 0.0.0"
+      ],
+      [
+        "yum-epel",
+        "= 4.5.0"
+      ]
+    ],
+    "dependencies": {
+      "haproxy (12.2.11)": [
+        [
+          "yum-epel",
+          ">= 0.0.0"
+        ]
+      ],
+      "myhaproxy (0.1.1)": [
+        [
+          "haproxy",
+          "~> 12.2.3"
+        ]
+      ],
+      "yum-epel (4.5.0)": [
+
+      ]
+    }
+  }
+}
