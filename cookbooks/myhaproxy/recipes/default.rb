@@ -29,11 +29,11 @@ haproxy_frontend 'http-in' do
   default_backend 'server_backend'
 end
 
+web_nodes = search('node', 'policy_name:company_web')
+server_array = web_nodes.map { |node| "#{node['cloud']['public_hostname']} #{node['cloud']['public_ipv4']}:80 maxconn 32" }
+
 haproxy_backend 'server_backend' do
-  server [
-  'ec2-44-201-26-6.compute-1.amazonaws.com 44.201.26.6:80 maxconn 32',
-  'ec2-52-1-71-190.compute-1.amazonaws.com 52.1.71.190:80 maxconn 32',
-  ]
+  server server_array
 end
 
 haproxy_service 'haproxy' do

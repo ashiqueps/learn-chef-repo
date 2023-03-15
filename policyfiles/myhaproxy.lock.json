@@ -1,5 +1,5 @@
 {
-  "revision_id": "24d113ecdfb8bd363a455a3e52d11e05acfc61a4a4001c79cc5623d7ab27848b",
+  "revision_id": "97fcd22596206070d79016f8680c483f2616f7478b16d4f2da0a5a94f49cc452",
   "name": "myhaproxy",
   "run_list": [
     "recipe[myhaproxy::default]"
@@ -20,19 +20,19 @@
       }
     },
     "myhaproxy": {
-      "version": "0.1.1",
-      "identifier": "3617ee78f2b28576b503a8a87643aec758c872a3",
-      "dotted_decimal_identifier": "15225961741202053.33413074570999363.192171211256483",
+      "version": "1.0.0",
+      "identifier": "071d20d8a929fa71b7cf668788821e91ef660c11",
+      "dotted_decimal_identifier": "2002351748098554.32008773774575746.33612135533585",
       "source": "../cookbooks/myhaproxy",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
-        "remote": null,
-        "revision": "29a9c4df6637ee47ece61f2da713a2821f57e842",
+        "remote": "git@github.com:ashiqueps/learn-chef-repo.git",
+        "revision": "45a6c3eafc5f74c2273de80250c93ffa3e70eab7",
         "working_tree_clean": false,
-        "published": false,
+        "published": true,
         "synchronized_remote_branches": [
-
+          "origin/main"
         ]
       },
       "source_options": {
@@ -79,7 +79,7 @@
           ">= 0.0.0"
         ]
       ],
-      "myhaproxy (0.1.1)": [
+      "myhaproxy (1.0.0)": [
         [
           "haproxy",
           "~> 12.2.3"
