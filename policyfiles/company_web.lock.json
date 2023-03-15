@@ -1,7 +1,8 @@
 {
-  "revision_id": "40d3233cea58995d0de0ffd196d0c32c43ab918a5b4fcd5630391c14374075fa",
+  "revision_id": "54de1069838deaaa43aea46d2a8d13a96b7b5d4cfd5903d55b83ded8f83a671a",
   "name": "company_web",
   "run_list": [
+    "recipe[mychef_client::default]",
     "recipe[company_web::default]"
   ],
   "included_policy_locks": [
@@ -16,8 +17,8 @@
       "cache_key": null,
       "scm_info": {
         "scm": "git",
-        "remote": null,
-        "revision": "f392c15ce0e15f50b5aea10b2a52732e8f0ec822",
+        "remote": "git@github.com:ashiqueps/learn-chef-repo.git",
+        "revision": "1735d50e7bbb44412888f2238704d61ca70e2d43",
         "working_tree_clean": false,
         "published": false,
         "synchronized_remote_branches": [
@@ -36,8 +37,8 @@
       "cache_key": null,
       "scm_info": {
         "scm": "git",
-        "remote": null,
-        "revision": "f392c15ce0e15f50b5aea10b2a52732e8f0ec822",
+        "remote": "git@github.com:ashiqueps/learn-chef-repo.git",
+        "revision": "1735d50e7bbb44412888f2238704d61ca70e2d43",
         "working_tree_clean": false,
         "published": false,
         "synchronized_remote_branches": [
@@ -48,6 +49,26 @@
         "path": "../cookbooks/company_web"
       }
     },
+    "mychef_client": {
+      "version": "0.1.0",
+      "identifier": "c68e0f7de1cbf763c09df747ea13399190903c11",
+      "dotted_decimal_identifier": "55888242576313335.28077807385438739.63297358412817",
+      "source": "../cookbooks/mychef_client",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@github.com:ashiqueps/learn-chef-repo.git",
+        "revision": "1735d50e7bbb44412888f2238704d61ca70e2d43",
+        "working_tree_clean": false,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/mychef_client"
+      }
+    },
     "myiis": {
       "version": "0.2.1",
       "identifier": "cd0784440dddcbcd7aa3187cc0d16bed4aec5c40",
@@ -56,8 +77,8 @@
       "cache_key": null,
       "scm_info": {
         "scm": "git",
-        "remote": null,
-        "revision": "f392c15ce0e15f50b5aea10b2a52732e8f0ec822",
+        "remote": "git@github.com:ashiqueps/learn-chef-repo.git",
+        "revision": "1735d50e7bbb44412888f2238704d61ca70e2d43",
         "working_tree_clean": false,
         "published": false,
         "synchronized_remote_branches": [
@@ -86,6 +107,10 @@
         ">= 0.0.0"
       ],
       [
+        "mychef_client",
+        ">= 0.0.0"
+      ],
+      [
         "myiis",
         ">= 0.0.0"
       ]
@@ -103,6 +128,9 @@
           "apache",
           ">= 0.0.0"
         ]
+      ],
+      "mychef_client (0.1.0)": [
+
       ],
       "myiis (0.2.1)": [
 

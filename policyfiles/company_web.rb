@@ -13,10 +13,11 @@ default_source :chef_repo, '../'
 default_source :supermarket
 
 # run_list: chef-client will run these recipes in the order specified.
-run_list 'company_web::default'
+run_list 'mychef_client::default', 'company_web::default'
 
 # Specify a custom source for a single cookbook:
 # cookbook 'example_cookbook', path: '../cookbooks/example_cookbook'
 cookbook 'company_web', path: '../cookbooks/company_web'
 cookbook 'apache', path: '../cookbooks/apache'
 cookbook 'myiis', path: '../cookbooks/myiis'
+cookbook 'mychef_client', path: '../cookbooks/mychef_client'

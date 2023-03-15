@@ -594,209 +594,209 @@
   594  vi ~/.bashrc 
   595  source ~/.bash
   596  source ~/.bashrc 
-  597  cd chef-repo/
-  598  ls
-  599  chef generate cookbook cookbooks/apache
-  600  chef generate recipe cookbooks/workstation/apache server
-  601  chef generate recipe cookbooks/apache server
-  602  sudo chef-client -z -r "recipe[apache]"
-  603  curl 0.0.0.0
-  604  git status 
-  605  git diff
-  606  git add .
+  597  ls
+  598  vi kitchen-template.yml 
+  599  ./vscode.sh 
+  600  cd chef-repo/
+  601  ls
+  602  chef generate cookbook cookbooks/apache
+  603  chef generate recipe cookbooks/workstation/apache server
+  604  chef generate recipe cookbooks/apache server
+  605  sudo chef-client -z -r "recipe[apache]"
+  606  curl 0.0.0.0
   607  git status 
-  608  git commit -m "apache cookbook"
-  609  git status 
-  610  cookstyle
-  611  cookstyle -a
+  608  git diff
+  609  git add .
+  610  git status 
+  611  git commit -m "apache cookbook"
   612  git status 
-  613  git diff
+  613  cookstyle
   614  cookstyle -a
-  615  cookstyle
+  615  git status 
   616  git diff
-  617  git add .
-  618  git commit -sm "Cooksyle fixes"
-  619  git status 
-  620  ls
-  621  cookstyle cookbooks/workstation/
-  622  cookstyle cookbooks/workstation/recipes/
-  623  ohai
-  624  ohai | more
-  625  ohai platform
-  626  ohai version
-  627  ohai hostname
-  628  ohai memory/total
-  629  ohai memory
-  630  ohai memory/free
-  631  sudo chef-client -z -r "recipe[apache]"
-  632  ls
-  633  cd cookbooks/workstation/
-  634  ls
-  635  cat kitchen.yml 
-  636  cd
-  637  cp kitchen-template.yml chef-repo/cookbooks/workstation/kitchen.yml 
-  638  cd -
-  639  cat kitchen.yml 
-  640  cd ../../
-  641  ls
-  642  kitchen create
-  643  cd cookbooks/workstation/
-  644  kitchen create
-  645  kitchen login
-  646  kitchen list
-  647  kitchen converge
-  648  kitchen verify
-  649  kitchen destroy
-  650  cd ../apache/
-  651  chef generate template
-  652  chef generate template --help
-  653  cd ../
-  654  chef generate template cookbooks/apache index.html
-  655  ls -la cookbooks/apache/templates/
-  656  ls
-  657  code cookbooks/apache/templates/index.html.erb 
-  658  ls
-  659  rm -rf cookbooks/
-  660  cd ../
-  661  chef generate template cookbooks/apache index.html
-  662  sudo chef-client -z -r "recipes[apache]"
-  663  sudo chef-client -z -r "recipe[apache]"
-  664  ls
-  665  cd 
-  666  ls
-  667  cd .chef
-  668  ls
-  669  knife configure init-config
-  670  cat credentials 
-  671  knife ssl fetch
+  617  cookstyle -a
+  618  cookstyle
+  619  git diff
+  620  git add .
+  621  git commit -sm "Cooksyle fixes"
+  622  git status 
+  623  ls
+  624  cookstyle cookbooks/workstation/
+  625  cookstyle cookbooks/workstation/recipes/
+  626  ohai
+  627  ohai | more
+  628  ohai platform
+  629  ohai version
+  630  ohai hostname
+  631  ohai memory/total
+  632  ohai memory
+  633  ohai memory/free
+  634  sudo chef-client -z -r "recipe[apache]"
+  635  ls
+  636  cd cookbooks/workstation/
+  637  ls
+  638  cat kitchen.yml 
+  639  cd
+  640  cp kitchen-template.yml chef-repo/cookbooks/workstation/kitchen.yml 
+  641  cd -
+  642  cat kitchen.yml 
+  643  cd ../../
+  644  ls
+  645  kitchen create
+  646  cd cookbooks/workstation/
+  647  kitchen create
+  648  kitchen login
+  649  kitchen list
+  650  kitchen converge
+  651  kitchen verify
+  652  kitchen destroy
+  653  cd ../apache/
+  654  chef generate template
+  655  chef generate template --help
+  656  cd ../
+  657  chef generate template cookbooks/apache index.html
+  658  ls -la cookbooks/apache/templates/
+  659  ls
+  660  code cookbooks/apache/templates/index.html.erb 
+  661  ls
+  662  rm -rf cookbooks/
+  663  cd ../
+  664  chef generate template cookbooks/apache index.html
+  665  sudo chef-client -z -r "recipes[apache]"
+  666  sudo chef-client -z -r "recipe[apache]"
+  667  ls
+  668  cd 
+  669  ls
+  670  cd .chef
+  671  ls
   672  knife configure init-config
-  673  knife ssl fetch
-  674  knife ssl check
-  675  knife client list
-  676  cd
-  677  git clone https://github.com/chef-training/foundations-cookbook-repo.git
-  678  cd foundations-cookbook-repo/
-  679  ls
-  680  mv myiis ~/chef-repo/cookbooks/
-  681  ls
-  682  git status 
-  683  git restore .
-  684  git status 
-  685  cd ../chef-repo/cookbooks/
-  686  ls
-  687  knife node --help
-  688  knife node list
-  689  knife bootstrap --help
-  690  knife bootstrap -o winrm 52.1.71.190 -U Administrator -P Cod3Can! -N iis_web
+  673  cat credentials 
+  674  knife ssl fetch
+  675  knife configure init-config
+  676  knife ssl fetch
+  677  knife ssl check
+  678  knife client list
+  679  cd
+  680  git clone https://github.com/chef-training/foundations-cookbook-repo.git
+  681  cd foundations-cookbook-repo/
+  682  ls
+  683  mv myiis ~/chef-repo/cookbooks/
+  684  ls
+  685  git status 
+  686  git restore .
+  687  git status 
+  688  cd ../chef-repo/cookbooks/
+  689  ls
+  690  knife node --help
   691  knife node list
-  692  knife client show
-  693  knife client list
-  694  knife client --help
-  695  knife client show student08-validator
-  696  knife client show iss_web
-  697  knife client show iis_web
-  698  knife node show iis_web
-  699  knife bootstrap -o ssh 44.201.26.6 -U chef -P Cod3Can! -N apache_web
-  700  sudo knife bootstrap -o ssh 44.201.26.6 -U chef -P Cod3Can! -N apache_web
-  701  sudo knife bootstrap 44.201.26.6 -U chef -P Cod3Can! -N apache_web
-  702  knife bootstrap 44.201.26.6 -U chef -P Cod3Can! --sudo -N apache_web
-  703  knife node list
-  704  cd ..
-  705  ls
-  706  chef generate policyfile policyfiles/
-  707  rm policyfiles/policyfiles.rb 
-  708  chef generate policyfile policyfiles/company_web.rb
-  709  code policyfiles/company_web.rb 
-  710  rm policyfiles/company_web.rb 
-  711  chef generate policyfile policyfiles/company_web
+  692  knife bootstrap --help
+  693  knife bootstrap -o winrm 52.1.71.190 -U Administrator -P Cod3Can! -N iis_web
+  694  knife node list
+  695  knife client show
+  696  knife client list
+  697  knife client --help
+  698  knife client show student08-validator
+  699  knife client show iss_web
+  700  knife client show iis_web
+  701  knife node show iis_web
+  702  knife bootstrap -o ssh 44.201.26.6 -U chef -P Cod3Can! -N apache_web
+  703  sudo knife bootstrap -o ssh 44.201.26.6 -U chef -P Cod3Can! -N apache_web
+  704  sudo knife bootstrap 44.201.26.6 -U chef -P Cod3Can! -N apache_web
+  705  knife bootstrap 44.201.26.6 -U chef -P Cod3Can! --sudo -N apache_web
+  706  knife node list
+  707  cd ..
+  708  ls
+  709  chef generate policyfile policyfiles/
+  710  rm policyfiles/policyfiles.rb 
+  711  chef generate policyfile policyfiles/company_web.rb
   712  code policyfiles/company_web.rb 
-  713  cd policyfiles/
-  714  rm company_web.rb 
-  715  chef generate policyfile apache
-  716  ls
-  717  code apache.rb 
-  718  chef install apache
-  719  chef install apache.rb 
-  720  code apache.lock.json 
-  721  chef show policy
-  722  chef show-policy
-  723  knife node policy set apache_web prod apache
-  724  chef push prod apache.lock.json 
-  725  knife node show apache_web
-  726  knife ssh 44.201.26.6 -m -x chef -P Cod3Can! 'sudo chef-client'
-  727  ls
-  728  cd ..
-  729  ls
-  730  chef generate cookbook cookbooks/company_web
-  731  ls
-  732  code cookbooks/company_web/recipes/default.rb 
-  733  chef generate attribute --help
-  734  chef generate attribute cookbooks/company_web default
-  735  chef generate template cookbooks/company_web homepage
-  736  chef generate policyfiles policyfiles/company_web
-  737  chef generate policyfile policyfiles/company_web
-  738  chef install policyfiles/company_web.rb 
-  739  cd policyfiles/
-  740  ls
-  741  chef push prod company_web.lock.json 
-  742  chef show-policy
-  743  knife node policy set iis_web prod compnay_web
-  744  knife node policy set iis_web prod company_web
-  745  knife node show iis_web
-  746  knife winrm 52.1.71.190 -m -x Administrator -P Cod3Can! "chef-client"
-  747  knife node policy set apache_web prod company_web
-  748  knife node show apache_web
-  749  knife ssh 44.201.26.6 -m -x chef -P Cod3Can! 'sudo chef-client'
-  750  sudo chef-client -z -r "recipe[myiis]"
-  751  sudo chef-client -z -r "recipe[a[acje]"
-  752  sudo chef-client -z -r "recipe[apache]"
-  753  git status 
-  754  cd ..
-  755  gst
+  713  rm policyfiles/company_web.rb 
+  714  chef generate policyfile policyfiles/company_web
+  715  code policyfiles/company_web.rb 
+  716  cd policyfiles/
+  717  rm company_web.rb 
+  718  chef generate policyfile apache
+  719  ls
+  720  code apache.rb 
+  721  chef install apache
+  722  chef install apache.rb 
+  723  code apache.lock.json 
+  724  chef show policy
+  725  chef show-policy
+  726  knife node policy set apache_web prod apache
+  727  chef push prod apache.lock.json 
+  728  knife node show apache_web
+  729  knife ssh 44.201.26.6 -m -x chef -P Cod3Can! 'sudo chef-client'
+  730  ls
+  731  cd ..
+  732  ls
+  733  chef generate cookbook cookbooks/company_web
+  734  ls
+  735  code cookbooks/company_web/recipes/default.rb 
+  736  chef generate attribute --help
+  737  chef generate attribute cookbooks/company_web default
+  738  chef generate template cookbooks/company_web homepage
+  739  chef generate policyfiles policyfiles/company_web
+  740  chef generate policyfile policyfiles/company_web
+  741  chef install policyfiles/company_web.rb 
+  742  cd policyfiles/
+  743  ls
+  744  chef push prod company_web.lock.json 
+  745  chef show-policy
+  746  knife node policy set iis_web prod compnay_web
+  747  knife node policy set iis_web prod company_web
+  748  knife node show iis_web
+  749  knife winrm 52.1.71.190 -m -x Administrator -P Cod3Can! "chef-client"
+  750  knife node policy set apache_web prod company_web
+  751  knife node show apache_web
+  752  knife ssh 44.201.26.6 -m -x chef -P Cod3Can! 'sudo chef-client'
+  753  sudo chef-client -z -r "recipe[myiis]"
+  754  sudo chef-client -z -r "recipe[a[acje]"
+  755  sudo chef-client -z -r "recipe[apache]"
   756  git status 
-  757  git diff
-  758  git status 
-  759  git add .
-  760  git status 
-  761  git commit -sm "Cookbook attributes"
-  762  git status 
-  763  ls
-  764  chef generate cookbook cookbooks/myhaproxy
-  765  knife node show
-  766  knife node show iis_web -a ipadress
-  767  knife node list
-  768  knife node show iis_web
+  757  cd ..
+  758  gst
+  759  git status 
+  760  git diff
+  761  git status 
+  762  git add .
+  763  git status 
+  764  git commit -sm "Cookbook attributes"
+  765  git status 
+  766  ls
+  767  chef generate cookbook cookbooks/myhaproxy
+  768  knife node show
   769  knife node show iis_web -a ipadress
-  770  knife node show iis_web -a ipaddress
-  771  knife node show iis_web -a cloud
-  772  knife node show apache_web -a cloud
-  773  chef generate policyfile policyfiles/myhaproxy
-  774  code policyfiles/myhaproxy.rb 
-  775  chef install policyfiles/myhaproxy.rb 
-  776  chef push prod policyfiles/myhaproxy.lock.json 
-  777  chef show-policy
-  778  knife bootstrap 44.214.118.217 -U chef -P Cod3Can! --sudo -N lb --policy-name myhaproxy --policy-group prod
-  779  knife node show lb
-  780  knife node policy set lb myhaproxy prod
-  781  knife node show lb
-  782  knife ssh 44.214.118.217 -m -x chef -P Cod3Can! "sudo chef-client"
-  783  knife node list
-  784  knife node delete lb
-  785  knife client list
-  786  knife client delete lb
-  787  ls
-  788  chef push prod policyfiles/myhaproxy.lock.json 
-  789  chef show-policy
-  790  knife bootstrap 44.214.118.217 -U chef -P Cod3Can! --sudo -N lb --policy-name myhaproxy --policy-group prod
-  791  chef install policyfiles/myhaproxy.rb 
-  792  chef push prod policyfiles/myhaproxy.lock.json 
+  770  knife node list
+  771  knife node show iis_web
+  772  knife node show iis_web -a ipadress
+  773  knife node show iis_web -a ipaddress
+  774  knife node show iis_web -a cloud
+  775  knife node show apache_web -a cloud
+  776  chef generate policyfile policyfiles/myhaproxy
+  777  code policyfiles/myhaproxy.rb 
+  778  chef install policyfiles/myhaproxy.rb 
+  779  chef push prod policyfiles/myhaproxy.lock.json 
+  780  chef show-policy
+  781  knife bootstrap 44.214.118.217 -U chef -P Cod3Can! --sudo -N lb --policy-name myhaproxy --policy-group prod
+  782  knife node show lb
+  783  knife node policy set lb myhaproxy prod
+  784  knife node show lb
+  785  knife ssh 44.214.118.217 -m -x chef -P Cod3Can! "sudo chef-client"
+  786  knife node list
+  787  knife node delete lb
+  788  knife client list
+  789  knife client delete lb
+  790  ls
+  791  chef push prod policyfiles/myhaproxy.lock.json 
+  792  chef show-policy
   793  knife bootstrap 44.214.118.217 -U chef -P Cod3Can! --sudo -N lb --policy-name myhaproxy --policy-group prod
   794  chef install policyfiles/myhaproxy.rb 
-  795  rm policyfiles/myhaproxy.lock.json 
-  796  chef install policyfiles/myhaproxy.rb 
-  797  chef push prod policyfiles/myhaproxy.lock.json 
-  798  knife bootstrap 44.214.118.217 -U chef -P Cod3Can! --sudo -N lb --policy-name myhaproxy --policy-group prod
-  799  chef update policyfiles/myhaproxy.rb
+  795  chef push prod policyfiles/myhaproxy.lock.json 
+  796  knife bootstrap 44.214.118.217 -U chef -P Cod3Can! --sudo -N lb --policy-name myhaproxy --policy-group prod
+  797  chef install policyfiles/myhaproxy.rb 
+  798  rm policyfiles/myhaproxy.lock.json 
+  799  chef install policyfiles/myhaproxy.rb 
   800  chef push prod policyfiles/myhaproxy.lock.json 
   801  knife bootstrap 44.214.118.217 -U chef -P Cod3Can! --sudo -N lb --policy-name myhaproxy --policy-group prod
   802  chef update policyfiles/myhaproxy.rb
@@ -805,20 +805,133 @@
   805  chef update policyfiles/myhaproxy.rb
   806  chef push prod policyfiles/myhaproxy.lock.json 
   807  knife bootstrap 44.214.118.217 -U chef -P Cod3Can! --sudo -N lb --policy-name myhaproxy --policy-group prod
-  808  ssh chef@44.214.118.217
-  809  chef update policyfiles/myhaproxy.rb
-  810  chef push prod policyfiles/myhaproxy.lock.json 
-  811  knife bootstrap 44.214.118.217 -U chef -P Cod3Can! --sudo -N lb --policy-name myhaproxy --policy-group prod
-  812  ssh chef@44.214.118.217
-  813  ssh chef@44.214.118.217  
-  814  ls
-  815  git status 
-  816  git diff
-  817  git add .
+  808  chef update policyfiles/myhaproxy.rb
+  809  chef push prod policyfiles/myhaproxy.lock.json 
+  810  knife bootstrap 44.214.118.217 -U chef -P Cod3Can! --sudo -N lb --policy-name myhaproxy --policy-group prod
+  811  ssh chef@44.214.118.217
+  812  chef update policyfiles/myhaproxy.rb
+  813  chef push prod policyfiles/myhaproxy.lock.json 
+  814  knife bootstrap 44.214.118.217 -U chef -P Cod3Can! --sudo -N lb --policy-name myhaproxy --policy-group prod
+  815  ssh chef@44.214.118.217
+  816  ssh chef@44.214.118.217  
+  817  ls
   818  git status 
-  819  git commit -sm "load balancer"
-  820  git status 
-  821  history
-  822  history > commands
-  823  rm commands 
-  824  history > commands.txt
+  819  git diff
+  820  git add .
+  821  git status 
+  822  git commit -sm "load balancer"
+  823  git status 
+  824  history
+  825  history > commands
+  826  rm commands 
+  827  history > commands.txt
+  828  knife search node *:*
+  829  git status 
+  830  ga commands.txt 
+  831  git add commands.txt 
+  832  git status 
+  833  git commit  -m "Updated the command history"
+  834  git status 
+  835  git branch 
+  836  git checkout  -b main
+  837  git status 
+  838  git branch 
+  839  git branch -M main
+  840  git status 
+  841  git remote add origin git@github.com:ashiqueps/learn-chef-repo.git
+  842  git push -u origin main
+  843  git status 
+  844  git remote  -v
+  845  git remote remove origin
+  846  git remote add origin https://github.com/ashiqueps/learn-chef-repo.git
+  847  git push -u origin main
+  848  ssh-keygen -t rsa -b 4096 -C "asaidala@progress.com"
+  849  cat ~/.ssh/id_rsa.pub 
+  850  git remote  remove origin
+  851  git remote add origin git@github.com:ashiqueps/learn-chef-repo.git
+  852  git push -u origin main
+  853  ls
+  854  cd chef-repo/
+  855  knife node list
+  856  knife node show apache_web
+  857  knife ssh 44.201.26.6 -m -x chef -P Cod3Can! 'chef-client'
+  858  knife ssh 44.201.26.6 -m -x chef -P Cod3Can! 'sudo chef-client'
+  859  ssh chef@44.201.26.6
+  860  ls
+  861  knife search node *:*
+  862  knife search node policy_name:company_web
+  863  knife search node policy_name:company_web -a cloud
+  864  knife search node policy_name:company_web -a cloud.public_hostname
+  865  chef udpate policyfiles/myhaproxy.rb 
+  866  chef -v
+  867  chef update policyfiles/myhaproxy.rb
+  868  chef push prod policyfiles/myhaproxy.lock.json 
+  869  knife ssh 
+  870  knife ssh 'name:lb' -x chef -P Cod3Can! 'sudo chef-client'
+  871  knife ssh 'name:lb' -x chef -P Cod3Can! 'sudo rm /etc/haproxy/haproxy.cfg'
+  872  knife ssh 'name:lb' -x chef -P Cod3Can! 'sudo chef-client'
+  873  knife ssh 'name:lb' -x chef -P Cod3Can! ''bash'
+ls
+exit
+  874  knife node show lb -a cloud
+  875  ssh chef@ec2-44-214-118-217.compute-1.amazonaws.com
+  876  knife ssh 'name:lb' -x chef -P Cod3Can! 'sudo rm /etc/haproxy/haproxy.cfg'
+  877  ssh chef@ec2-44-214-118-217.compute-1.amazonaws.com
+  878  knife ssh 'name:lb' -x chef -P Cod3Can! 'sudo chef-client'
+  879  knife node list -a cloud
+  880  knife node list
+  881  knife node show lb
+  882  knife search node policy_name:company_web -a cloud.public_hostname
+  883  knife search help
+  884  knife search --help
+  885  knife search client *:*
+  886  ls
+  887  chef generate cookbook cookbooks/mychef_client
+  888  gst
+  889  git status 
+  890  git add cookbooks/myhaproxy/metadata.rb cookbooks/myhaproxy/recipes/default.rb policyfiles/myhaproxy.lock.json
+  891  git status 
+  892  git commit  -sm "Dynamic cookbook using search"
+  893  git status 
+  894  cookstyle -a cookbooks/mychef_client/recipes/default.rb 
+  895  gst
+  896  git status 
+  897  ls
+  898  chef update policyfiles/company_web.rb 
+  899  chef push prod policyfiles/company_web.lock.json 
+  900  knife ssh 'name:apache_web' -x chef -P Cod3Can! 'sudo chef-client'
+  901  knife ssh 'name:apache_web' -x chef -P Cod3Can! 'cat /etc/cron.d/chef-client'
+  902  knife ssh 'name:apache_web' -x chef -P Cod3Can! 'sudo cat /etc/cron.d/chef-client'
+  903  knife winrm 'name:iis_web' -x Administrator -P Cod3Can! "chef-client"
+  904  knife winrm 'name:iis_web' -x Administrator -P Cod3Can! -a cloud.public_ipv4 "chef-client"
+  905  knife winrm 'name:iis_web' -x Administrator -P Cod3Can! -a cloud.public_ipv4 "schetasks /Query | findstr /i 'chef-client'"
+  906  knife winrm 'name:iis_web' -x Administrator -P Cod3Can! -a cloud.public_ipv4 "schtasks /Query | findstr /i 'chef-client'"
+  907  knife winrm 'name:iis_web' -x Administrator -P Cod3Can! -a cloud.public_ipv4 'schtasks /Query | findstr /i "chef-client"'
+  908  chef push acceptance policyfiles/company_web.lock.json 
+  909  chef show-policy
+  910  knife node policy set iis_web prod company_web
+  911  knife node policy set iis_web acceptance company_web
+  912  knife node show iis_web
+  913  chef update policyfiles/myhaproxy.rb 
+  914  chef push prod policyfiles/myhaproxy.lock.json 
+  915  knife ssh 'name:lb' -x chef -P Cod3Can! 'sudo chef-client'
+  916  chef update policyfiles/myhaproxy.rb 
+  917  chef push prod policyfiles/myhaproxy.lock.json 
+  918  knife ssh 'name:lb' -x chef -P Cod3Can! 'sudo chef-client'
+  919  knife search node "policy_name:company_web AND policy_group:acceptance"
+  920  knife search node "policy_name:company_web AND policy_group:prod"
+  921  irb
+  922  chef update policyfiles/myhaproxy.rb 
+  923  chef push prod policyfiles/myhaproxy.lock.json 
+  924  knife ssh 'name:lb' -x chef -P Cod3Can! 'sudo chef-client'
+  925  knife search node "policy_name:company_web"
+  926  cookstyle -a
+  927  git status 
+  928  git didff
+  929  git diff
+  930  git status 
+  931  git add .
+  932  git status 
+  933  history > commands.txt
+  934  rm commands.txt 
+  935  history > commands.txt

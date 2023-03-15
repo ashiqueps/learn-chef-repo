@@ -29,7 +29,12 @@ haproxy_frontend 'http-in' do
   default_backend 'server_backend'
 end
 
-web_nodes = search('node', 'policy_name:company_web')
+web_nodes = search('node', "policy_name:company_web AND policy_group:#{node.policy_group}")
+puts 'What is the true value of node.policy_group'
+puts "policy_name:company_web AND policy_group:#{node.policy_group}"
+puts '___________________________________________________________________'
+# ooh okay got it. This node.policy_group will be the policy group of myhaproxy policy file.
+
 server_array = web_nodes.map { |node| "#{node['cloud']['public_hostname']} #{node['cloud']['public_ipv4']}:80 maxconn 32" }
 
 haproxy_backend 'server_backend' do
@@ -41,5 +46,5 @@ haproxy_service 'haproxy' do
 end
 
 haproxy_service 'haproxy' do
-  action [ :restart ]
+  subscribes :reload, 'template[/etc/haproxy/haproxy.cfg]', :delayed
 end
